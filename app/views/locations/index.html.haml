@@ -38,8 +38,13 @@
     =value
 
 %p=link_to 'Create new location', new_location_path
-
 %p=link_to 'Delete all', destroy_all_locations_path, method: :get, confirm: 'Are you sure?'
+%p=link_to 'Find POIS in radio', locations_radio_path
+%p=link_to 'Convex Hull', locations_convex_path
+%p=link_to 'Find POIs visited', locations_visited_path
+%p=link_to 'Dog track', dog_gps_track_path
+%p=link_to 'Routes of clients', dog_gps_users_path
+
 
 = javascript_include_tag '/assets/maps/OpenLayers'
 = javascript_include_tag '/assets/maps/locations'

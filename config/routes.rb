@@ -1,12 +1,30 @@
 Analysistool::Application.routes.draw do
-  #get "locations/index"
+  get "locations/index"
   #
-  #get "locations/new"
+  get "locations/new"
   #
-  #get "locations/show"
+  get "locations/show"
   #
-  #get "locations/edit"
-
+  get "locations/edit"
+  #
+  get "locations/radio"
+  #
+  get "locations/radiorespuesta"
+  #
+  get "locations/convex"
+  #
+  get "locations/visited"
+  #
+  post "locations/poivisited"
+  #
+  get "dog_gps/track"
+  #
+  post "dog_gps/route"
+  #
+  get "dog_gps/users"
+  #
+  post "dog_gps/usersmap"
+  
   resources :locations do
     collection do
       get :destroy_all
@@ -17,7 +35,7 @@ Analysistool::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root :to => 'locations#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
